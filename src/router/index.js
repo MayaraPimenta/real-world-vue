@@ -7,11 +7,12 @@ import EventShow from "../views/EventShow.vue";
 Vue.use(VueRouter);
 
 const routes = [
-  
+
   {
     path: "/",
     name: "event-list",
     component: EventList,
+    props: true
   },
   {
     path: "/event/:id",

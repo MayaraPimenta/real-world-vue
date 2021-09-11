@@ -13,22 +13,10 @@
 
 <script>
 export default {
-  data() {
-    return {
-      event: {
-        id: 1,
-        title: "Beach Cleanup",
-        date: "Tuesday, Aug 19, 2021",
-        time: "6:00",
-        attendees: [
-          { id: "abc123", name: "Adam" },
-          { id: "def456", name: "Gregg" },
-        ],
-      },
-    };
+  props: {
+    event: Object,
   },
 
-  computed: {},
 };
 </script>
 

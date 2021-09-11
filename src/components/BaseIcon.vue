@@ -21,9 +21,6 @@ export default {
       default: 24,
     },
   },
-  data() {},
-  computed: {},
-  methods: {},
 };
 </script>
 
