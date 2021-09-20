@@ -22,7 +22,7 @@ export default {
 
 <style scoped>
 h4 {
-  color: green;
+  color: #39b982;
 }
 
 .event-card {
