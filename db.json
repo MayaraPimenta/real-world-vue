@@ -339,6 +339,60 @@
       "date": "",
       "time": "",
       "attendees": []
+    },
+    {
+      "id": 2756067,
+      "user": {
+        "id": "abc123",
+        "name": "Adam"
+      },
+      "category": "animal welfare",
+      "organizer": {
+        "id": "abc123",
+        "name": "Adam"
+      },
+      "title": "Puppy Picnic",
+      "description": "",
+      "location": "Park",
+      "date": "2021-10-30T14:36:00.000Z",
+      "time": "15:00",
+      "attendees": []
+    },
+    {
+      "id": 5190304,
+      "user": {
+        "id": "abc123",
+        "name": "Adam"
+      },
+      "category": "animal welfare",
+      "organizer": {
+        "id": "abc123",
+        "name": "Adam"
+      },
+      "title": "Puppy Party",
+      "description": "",
+      "location": "",
+      "date": "2021-10-23T14:37:00.000Z",
+      "time": "8:00",
+      "attendees": []
+    },
+    {
+      "id": 4983733,
+      "user": {
+        "id": "abc123",
+        "name": "Adam"
+      },
+      "category": "",
+      "organizer": {
+        "id": "abc123",
+        "name": "Adam"
+      },
+      "title": "",
+      "description": "",
+      "location": "",
+      "date": "",
+      "time": "",
+      "attendees": []
     }
   ]
 }
