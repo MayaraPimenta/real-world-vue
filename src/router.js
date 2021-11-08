@@ -53,7 +53,7 @@ const router = new Router({
       props: true,
     },
     {
-      path: "network-issue",
+      path: "/network-issue",
       name: "network-issue",
       component: NetworkIssue,
     },
