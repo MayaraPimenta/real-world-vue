@@ -1,7 +1,6 @@
 <template>
   <div>
     <h1>Create an Event</h1>
-
     <form @submit.prevent="createEvent">
       <BaseSelect
         label="Select a category"
@@ -12,7 +11,7 @@
       />
       <template v-if="$v.event.category.$error">
         <p v-if="!$v.event.category.required" class="errorMessage">
-          Category is required
+          Category is required.
         </p>
       </template>
 
@@ -26,9 +25,10 @@
         :class="{ error: $v.event.title.$error }"
         @blur="$v.event.title.$touch()"
       />
+
       <template v-if="$v.event.title.$error">
         <p v-if="!$v.event.title.required" class="errorMessage">
-          Title is required
+          Title is required.
         </p>
       </template>
 
@@ -41,9 +41,10 @@
         :class="{ error: $v.event.description.$error }"
         @blur="$v.event.description.$touch()"
       />
+
       <template v-if="$v.event.description.$error">
         <p v-if="!$v.event.description.required" class="errorMessage">
-          Description is required
+          Description is required.
         </p>
       </template>
 
@@ -57,9 +58,10 @@
         :class="{ error: $v.event.location.$error }"
         @blur="$v.event.location.$touch()"
       />
+
       <template v-if="$v.event.location.$error">
         <p v-if="!$v.event.location.required" class="errorMessage">
-          Location is required
+          Location is required.
         </p>
       </template>
 
@@ -74,9 +76,10 @@
           @opened="$v.event.date.$touch()"
         />
       </div>
+
       <template v-if="$v.event.date.$error">
         <p v-if="!$v.event.date.required" class="errorMessage">
-          Date is required
+          Date is required.
         </p>
       </template>
 
@@ -88,13 +91,13 @@
         :class="{ error: $v.event.time.$error }"
         @blur="$v.event.time.$touch()"
       />
+
       <template v-if="$v.event.time.$error">
         <p v-if="!$v.event.time.required" class="errorMessage">
-          Time is required
+          Time is required.
         </p>
       </template>
 
-      <!-- <input type="submit" class="button -fill-gradient" value="Submit" /> -->
       <BaseButton
         type="submit"
         buttonClass="-fill-gradient"
@@ -102,7 +105,7 @@
         >Submit</BaseButton
       >
       <p v-if="$v.$anyError" class="errorMessage">
-        Please fill out the required field(s)
+        Please fill out the required field(s).
       </p>
     </form>
   </div>
@@ -114,12 +117,9 @@ import NProgress from "nprogress";
 import { required } from "vuelidate/lib/validators";
 
 export default {
-  name: "EventCreate",
-
   components: {
     Datepicker,
   },
-
   data() {
     const times = [];
     for (let i = 1; i <= 24; i++) {
@@ -131,7 +131,6 @@ export default {
       event: this.createFreshEventObject(),
     };
   },
-
   validations: {
     event: {
       category: { required },
@@ -142,7 +141,6 @@ export default {
       time: { required },
     },
   },
-
   methods: {
     createEvent() {
       this.$v.$touch();
@@ -162,7 +160,6 @@ export default {
           });
       }
     },
-
     createFreshEventObject() {
       const user = this.$store.state.user.user;
       const id = Math.floor(Math.random() * 10000000);
@@ -183,13 +180,3 @@ export default {
   },
 };
 </script>
-
-<style scoped>
-.field {
-  margin-bottom: 24px;
-}
-
-.vdp-datepicker div input {
-  border-radius: 0.5rem;
-}
-</style>
